@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>IniciarSesion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" label="Correo" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-input type="password" label="Contraseña" placeholder="*****************"[(ngModel)]="usuario.password"></ion-input>
+      
+    </ion-item>
+  
+    <ion-item>
+      <ion-button (click)="login()"><ion-icon name="log-in-outline"></ion-icon></ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

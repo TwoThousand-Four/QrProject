@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>main-menu</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <!-- Tab bar -->
+    <ion-tab-bar id="tab-bar" slot="bottom">
+      <ion-tab-button tab="schedule">
+        <ion-icon name="calendar" aria-hidden="true"></ion-icon>
+        <ion-label>Horarios</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
+        <ion-label>Perfil</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="information-circle" aria-hidden="true"></ion-icon>
+        <ion-label>Ayuda</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
