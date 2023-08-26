@@ -61,4 +61,8 @@ export class IniciarSesionPage implements OnInit {
   ngOnInit() {
   }
 
+GoToHome(){
+  this.router.navigate(['/home']);
+}
+
 }

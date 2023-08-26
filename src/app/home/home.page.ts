@@ -12,12 +12,12 @@ export class HomePage {
 
 
   
-    GoToSignup() {
-      this.router.navigate(['iniciar-sesion']);
-    }
+  GoToLogin() {
+    this.router.navigate(['/iniciar-sesion']);
+  }
 
+  GoToSignUp(){
+    this.router.navigate(['/registro']);
 
-
-  
-
+  }
 }
