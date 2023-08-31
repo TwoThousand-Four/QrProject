@@ -1,8 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>main-menu</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-item>Bienvenido </ion-item>
+</ion-content>
+
 
 <ion-content>
   <ion-tabs>
@@ -13,7 +18,7 @@
         <ion-label>Horarios</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="speakers">
+      <ion-tab-button tab="speakers" (click)="GoToPerfil()">
         <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-tab-button>
