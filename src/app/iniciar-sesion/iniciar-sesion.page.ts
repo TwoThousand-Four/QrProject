@@ -64,5 +64,7 @@ export class IniciarSesionPage implements OnInit {
 GoToHome(){
   this.router.navigate(['/home']);
 }
-
+GoToRecuperarContra(){
+  this.router.navigate(['/recuperar-contra']);
+}
 }

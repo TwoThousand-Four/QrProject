@@ -6,12 +6,20 @@
   </ion-toolbar>
 </ion-header>
 <br>
-<ion-content id="container-signup">
-
-  <ion-button id="signup-button" expand="block" shape="round" (click)="GoToSignUp()"><ion-icon name="person"></ion-icon>Registrarse</ion-button>
-  <ion-button id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
-  
+<ion-content class="auth-form">
+  <br>
+  <div style="padding: 50px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-button color="secondary" id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
+
 <ion-content id="footer-buttons">
+  
 </ion-content>
