@@ -5,18 +5,21 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content id="container-signup">
-
-
-  <ion-button id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
-  
-  <ion-button shape="round" (click)="GoToRecuperarContra()">Recuperar Contraseña</ion-button>
+<br>
+<ion-content class="auth-form">
+  <br>
+  <div style="padding: 50px;">
+    <ion-grid>
+      <ion-row>
+        <ion-col align-self-center>
+          <ion-button color="secondary" id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
 </ion-content>
 
-
 <ion-content id="footer-buttons">
-
-
+  
 </ion-content>

@@ -4,20 +4,22 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-list>
-    <ion-item>
-      <ion-input type="text" label="Correo" [(ngModel)]="usuario.email"></ion-input>
+<ion-content>
+  <form>
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input placeholder="juanitoperez@gmail.com"type="text" required></ion-input>
     </ion-item>
-  
-    <ion-item>
-      <ion-input type="password" label="Contraseña" placeholder="*****************"[(ngModel)]="usuario.password"></ion-input>
-      
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input placeholder="***************"type="password" required></ion-input>
     </ion-item>
-  
-    <ion-item>
-      <ion-button (click)="GoToHome()"><ion-icon name="arrow-back"></ion-icon></ion-button>
-      <ion-button (click)="login()"><ion-icon name="arrow-forward"></ion-icon></ion-button>
-    </ion-item>
-  </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button click="login()" type="submit" color="danger" expand="block">Iniciar sesión</ion-button>
+        <br>
+        <a click="GoToRecuperarContra"class="small-text">¿olvidaste tu contraseña?</a>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

@@ -20,7 +20,4 @@ export class HomePage {
     this.router.navigate(['/registro']);
 
   }
-  GoToRecuperarContra(){
-    this.router.navigate(['/recuperar-contra']);
-  }
 }
