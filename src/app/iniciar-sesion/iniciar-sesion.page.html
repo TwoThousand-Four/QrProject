@@ -5,21 +5,17 @@
 </ion-header>
 
 <ion-content>
-  <form>
     <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input placeholder="juanitoperez@gmail.com"type="text" required></ion-input>
+      <ion-input placeholder="juanitoperez@gmail.com"type="text" required [(ngModel)]="usuario.email">Email</ion-input>
     </ion-item>
     <ion-item lines="full">
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input placeholder="***************"type="password" required></ion-input>
+      <ion-input placeholder="***************"type="password" required [(ngModel)]="usuario.password">Contraseña</ion-input>
     </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button click="login()" type="submit" color="danger" expand="block">Iniciar sesión</ion-button>
+        <ion-button (click)="login()" type="submit" color="danger" expand="block">Iniciar sesión</ion-button>
         <br>
-        <a click="GoToRecuperarContra"class="small-text">¿olvidaste tu contraseña?</a>
+        <a (click)="GoToRecuperarContra()"class="small-text">¿olvidaste tu contraseña?</a>
       </ion-col>
     </ion-row>
-  </form>
 </ion-content>

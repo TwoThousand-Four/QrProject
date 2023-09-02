@@ -16,4 +16,10 @@ export class MainMenuPage implements OnInit {
   GoToPerfil() {
     this.router.navigate(['/perfil']);
   }
+  GoToHorarios() {
+    this.router.navigate(['/horarios']);
+  }
+  GoToAyuda() {
+    this.router.navigate(['/ayuda']);
+  }
 }

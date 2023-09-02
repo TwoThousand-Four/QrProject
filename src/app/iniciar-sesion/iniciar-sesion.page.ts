@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 interface User{
@@ -27,8 +28,8 @@ export class IniciarSesionPage implements OnInit {
 
 
   usuario = {
-    email :'',
-    password :''
+    email:'',
+    password:''
   }
 
   usuarios:  User[] = 
@@ -47,10 +48,10 @@ export class IniciarSesionPage implements OnInit {
 
   login() {
 
-    console.log(this.usuario.email + " clave: "+ this.usuario.password)
+    console.log("usuario" + this.usuario.email + " clave: "+ this.usuario.password)
     this.usuarios.forEach(persona => {
       if (this.usuario.email==persona.email && this.usuario.password == persona.contrasena)  {
-        this.router.navigate(['main-menu'])
+        this.router.navigate(['/main-menu'])
       
       
       }
@@ -60,6 +61,7 @@ export class IniciarSesionPage implements OnInit {
 
   ngOnInit() {
   }
+  
 
 GoToHome(){
   this.router.navigate(['/home']);
