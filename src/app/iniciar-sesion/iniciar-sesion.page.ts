@@ -48,7 +48,7 @@ export class IniciarSesionPage implements OnInit {
 
   login() {
 
-    console.log("usuario" + this.usuario.email + " clave: "+ this.usuario.password)
+    console.log("usuario: " + this.usuario.email + " clave: "+ this.usuario.password)
     this.usuarios.forEach(persona => {
       if (this.usuario.email==persona.email && this.usuario.password == persona.contrasena)  {
         this.router.navigate(['/main-menu'])
