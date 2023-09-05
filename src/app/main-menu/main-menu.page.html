@@ -1,25 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>main-menu</ion-title>
+    <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-item lines="none">Bienvenido </ion-item>
+</ion-content>
+
+<ion-content>
+  <ion-button>
+    <ion-label>
+      Escanear Qr
+    </ion-label>
+  </ion-button>
+</ion-content>
+
 
 <ion-content>
   <ion-tabs>
     <!-- Tab bar -->
     <ion-tab-bar id="tab-bar" slot="bottom">
-      <ion-tab-button tab="schedule">
-        <ion-icon name="calendar" aria-hidden="true"></ion-icon>
+      <ion-tab-button>
+        <ion-icon name="calendar" aria-hidden="true" (click)="GoToHorarios()"></ion-icon>
         <ion-label>Horarios</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="speakers">
+      <ion-tab-button (click)="GoToPerfil()">
         <ion-icon name="person-circle" aria-hidden="true"></ion-icon>
         <ion-label>Perfil</ion-label>
       </ion-tab-button>
   
-      <ion-tab-button tab="about">
-        <ion-icon name="information-circle" aria-hidden="true"></ion-icon>
+      <ion-tab-button >
+        <ion-icon name="information-circle" aria-hidden="true" (click)="GoToAyuda()"></ion-icon>
         <ion-label>Ayuda</ion-label>
       </ion-tab-button>
     </ion-tab-bar>

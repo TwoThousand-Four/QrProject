@@ -18,10 +18,23 @@ const routes: Routes = [
   {
     path: 'main-menu',
     loadChildren: () => import('./main-menu/main-menu.module').then( m => m.MainMenuPageModule)
-  },  {
-    path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
   },
+  {
+    path: 'recuperar-contra',
+    loadChildren: () => import('./recuperar-contra/recuperar-contra.module').then( m => m.RecuperarContraPageModule)
+  },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'horarios',
+    loadChildren: () => import('./horarios/horarios.module').then( m => m.HorariosPageModule)
+  },
+  {
+    path: 'ayuda',
+    loadChildren: () => import('./ayuda/ayuda.module').then( m => m.AyudaPageModule)
+  },
+
 
 ];
 

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
-
 interface User{
 
   id: Number,
@@ -15,21 +13,18 @@ interface User{
 
 type UserType = 'Alumno' | 'Profesor'
 
-
-
 @Component({
-  selector: 'app-iniciar-sesion',
-  templateUrl: './iniciar-sesion.page.html',
-  styleUrls: ['./iniciar-sesion.page.scss'],
+  selector: 'app-recuperar-contra',
+  templateUrl: './recuperar-contra.page.html',
+  styleUrls: ['./recuperar-contra.page.scss'],
 })
-export class IniciarSesionPage implements OnInit {
+export class RecuperarContraPage implements OnInit {
 
   constructor(private router: Router) { }
 
-
   usuario = {
-    email:'',
-    password:''
+    email :'',
+    password :''
   }
 
   usuarios:  User[] = 
@@ -46,27 +41,19 @@ export class IniciarSesionPage implements OnInit {
     
 ]
 
-  login() {
 
-    console.log("usuario: " + this.usuario.email + " clave: "+ this.usuario.password)
+  ngOnInit() {
+    
+  }
+
+  RecuperarContra(){
     this.usuarios.forEach(persona => {
-      if (this.usuario.email==persona.email && this.usuario.password == persona.contrasena)  {
-        this.router.navigate(['/main-menu'])
+      if (this.usuario.email==persona.email)  {
+        
       
       
       }
     });
-    
- }
-
-  ngOnInit() {
   }
-  
 
-GoToHome(){
-  this.router.navigate(['/home']);
-}
-GoToRecuperarContra(){
-  this.router.navigate(['/recuperar-contra']);
-}
 }

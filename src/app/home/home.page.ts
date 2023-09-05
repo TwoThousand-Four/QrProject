@@ -16,8 +16,5 @@ export class HomePage {
     this.router.navigate(['/iniciar-sesion']);
   }
 
-  GoToSignUp(){
-    this.router.navigate(['/registro']);
 
-  }
 }
