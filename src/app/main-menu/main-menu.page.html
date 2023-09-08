@@ -8,14 +8,22 @@
   <ion-item lines="none">Bienvenido </ion-item>
 </ion-content>
 
-<ion-content>
-  <ion-button>
-    <ion-label>
-      Escanear Qr
-    </ion-label>
-  </ion-button>
-</ion-content>
 
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let barcode of barcodes">
+      <ion-label position="stacked">{{ barcode.format }}</ion-label>
+      <ion-input type="text" [value]="barcode.rawValue"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-item>
+      <ion-fab-button (click)="scan()" [disabled]="!isSupported">
+        <ion-icon name="scan"></ion-icon>
+      </ion-fab-button>
+    </ion-item>
+  </ion-fab>
+</ion-content>
 
 <ion-content>
   <ion-tabs>
