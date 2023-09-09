@@ -16,8 +16,16 @@ export class MainMenuPage implements OnInit, OnDestroy {
 
   constructor(private router: Router) { }
 
+  constructor(private router: Router,
+              private alertController: AlertController) { }
+
   ngOnInit() {
+    BarcodeScanner.isSupported().then((result) => {
+      this.isSupported = result.supported;
+    });
   }
+
+  
 
   GoToPerfil() {
     this.router.navigate(['/perfil']);
