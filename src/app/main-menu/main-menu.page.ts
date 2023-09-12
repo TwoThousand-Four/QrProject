@@ -1,6 +1,5 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component , OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { QRCodeModule } from 'angularx-qrcode';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 
 @Component({
@@ -8,22 +7,14 @@ import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
   templateUrl: './main-menu.page.html',
   styleUrls: ['./main-menu.page.scss'],
 })
-export class MainMenuPage implements OnInit, OnDestroy {
+export class MainMenuPage implements OnDestroy {
 
   qrCodeString= 'This is a ';
   scannedResult: any;
   content_visibility = '';
 
+
   constructor(private router: Router) { }
-
-  constructor(private router: Router,
-              private alertController: AlertController) { }
-
-  ngOnInit() {
-    BarcodeScanner.isSupported().then((result) => {
-      this.isSupported = result.supported;
-    });
-  }
 
   
 

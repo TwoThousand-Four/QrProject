@@ -4,20 +4,22 @@
   </ion-toolbar>
 </ion-header>
 <br>
+
 <ion-content>
-  <div id="container-buttons">
-    <ion-item lines="full">
-      <ion-input placeholder="juanitoperez@gmail.com"type="text" required [(ngModel)]="usuario.email">Email</ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-input placeholder="***************"type="password" required [(ngModel)]="usuario.password">Contraseña</ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="login()" type="submit" color="danger" expand="block">Iniciar sesión</ion-button>
-        <br>
-        <a (click)="GoToRecuperarContra()" class="small-text">¿olvidaste tu contraseña?</a>
-      </ion-col>
-    </ion-row>
-  </div>
+  <img id="img-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="">
+  <ion-card id="card" display="blockl">
+    <ion-card-content id="card-content">
+      <div id="container-buttons">
+          <ion-input id="input" label="Email" label-placement="floating" fill="outline" placeholder="juanitoperez@gmail.com"type="text" required [(ngModel)]="usuario.email"></ion-input>
+          <ion-input id="input" label="Contraseña" label-placement="floating" fill="outline" placeholder="***************"type="password" required [(ngModel)]="usuario.password"></ion-input>
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="login()" type="submit" color="warning" expand="block">Iniciar sesión</ion-button>
+            <br>
+            <a (click)="GoToRecuperarContra()" class="small-text">¿olvidaste tu contraseña?</a>
+          </ion-col>
+        </ion-row>
+      </div>
+  </ion-card-content>
+  </ion-card>
 </ion-content>

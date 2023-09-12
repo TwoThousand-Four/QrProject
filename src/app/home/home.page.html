@@ -7,16 +7,21 @@
 </ion-header>
 <br>
 <ion-content class="auth-form">
-  <br>
-  <div id="container-button-login">
-    <ion-grid>
-      <ion-row>
-        <ion-col align-self-center>
-          <ion-button id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </div>
+  <img id="img-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png" alt="">
+  <ion-card id="card">
+  <ion-card-content>
+    <label id="label-title">Bienvenido a DuocUC RegistrAPP</label>
+    <div id="container-button-login">
+        <ion-grid>
+          <ion-row>
+            <ion-col align-self-center>
+              <ion-button id="signup-button" expand="block" shape="round" (click)="GoToLogin()">Iniciar Sesión</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+  </ion-card-content>
+  </ion-card>
 
 </ion-content>
 
