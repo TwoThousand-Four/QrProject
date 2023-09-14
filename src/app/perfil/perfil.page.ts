@@ -40,6 +40,7 @@ export class PerfilPage implements OnInit {
       tipoUser: "Profesor",
     },
     
+    
 ]
 
 
