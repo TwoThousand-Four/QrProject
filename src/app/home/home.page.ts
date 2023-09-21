@@ -59,7 +59,7 @@ export class HomePage {
             ]
             login() {
 
-              console.log("usuario: " + this.usuario.email + " clave: "+ this.usuario.password)
+              console.log("email: " + this.usuario.email + " clave: "+ this.usuario.password)
               this.usuarios.forEach(persona => {
                 if (this.usuario.email==persona.email && this.usuario.password == persona.contrasena)  {
                   this.router.navigate(['/main-menu'])
@@ -116,6 +116,7 @@ export class HomePage {
               }
               GoToRecuperarContra(){
                 this.router.navigate(['/recuperar-contra']);
+                this.modal.dismiss();
               }
 }
 
